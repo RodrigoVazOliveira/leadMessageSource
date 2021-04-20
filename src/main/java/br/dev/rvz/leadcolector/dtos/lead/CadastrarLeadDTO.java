@@ -31,9 +31,9 @@ public class CadastrarLeadDTO {
 	}
 	
 	public CadastrarLeadDTO(
-			@NotNull(message = "o campo primeiroNome não foi informado") @NotEmpty(message = "O campo primeiroNome não foi preenchido") @Length(max = 70, message = "O cmapo primeiroNome deve possuir no máximo 70 caracteres") String primeiroNome,
-			@NotNull(message = "o campo ultimoNome não foi informado") @NotEmpty(message = "O campo ultimoNome não foi preenchido") @Length(max = 70, message = "O cmapo ultimoNome deve possuir no máximo 70 caracteres") String ultimoNome,
-			@Email(message = "E-mail informado é invalido!") @NotNull(message = "o campo email não foi informado") @NotEmpty(message = "O campo email não foi preenchido") @Length(max = 150, message = "O cmapo email deve possuir no máximo 150 caracteres") String email) {
+			 String primeiroNome,
+			 String ultimoNome,
+			 String email) {
 		super();
 		this.primeiroNome = primeiroNome;
 		this.ultimoNome = ultimoNome;
