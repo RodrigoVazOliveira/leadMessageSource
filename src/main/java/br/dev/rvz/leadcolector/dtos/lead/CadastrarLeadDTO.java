@@ -11,20 +11,20 @@ import br.dev.rvz.leadcolector.models.Lead;
 
 public class CadastrarLeadDTO {
 
-	@NotNull(message = "o campo primeiroNome não foi informado")
-	@NotEmpty(message = "O campo primeiroNome não foi preenchido")
-	@Length(max = 70, message = "O cmapo primeiroNome deve possuir no máximo 70 caracteres")
+	@NotNull(message = "{campo.naoinformado} campo: primeiroNome")
+	@NotEmpty(message = "{campo.vazio} campo: primeiroNome")
+	@Length(max = 70, message = "{campo.excedelimite} cmapo: primeiroNome limite: 70")
 	private String primeiroNome;
 	
-	@NotNull(message = "o campo ultimoNome não foi informado")
-	@NotEmpty(message = "O campo ultimoNome não foi preenchido")
-	@Length(max = 70, message = "O cmapo ultimoNome deve possuir no máximo 70 caracteres")
+	@NotNull(message = "{campo.naoinformado} campo: ultimoNome")
+	@NotEmpty(message = "{campo.vazio} campo: ultimoNome")
+	@Length(max = 70, message = "{campo.excedelimite} cmapo: ultimoNome limite: 70")
 	private String ultimoNome;
 	
-	@Email(message = "E-mail informado é invalido!")
-	@NotNull(message = "o campo email não foi informado")
-	@NotEmpty(message = "O campo email não foi preenchido")
-	@Length(max = 150, message = "O cmapo email deve possuir no máximo 150 caracteres")
+	@Email(message = "{email.invalido}")
+	@NotNull(message = "{campo.naoinformado} campo: ultimoNome")
+	@NotEmpty(message = "{campo.vazio} campo: email")
+	@Length(max = 70, message = "{campo.excedelimite} cmapo: email limite: 150")
 	private String email;
 
 	public CadastrarLeadDTO() {
