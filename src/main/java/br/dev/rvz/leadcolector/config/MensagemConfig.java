@@ -1,6 +1,7 @@
 package br.dev.rvz.leadcolector.config;
 
 import org.springframework.context.MessageSource;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
@@ -21,6 +22,6 @@ public class MensagemConfig {
 	public LocalValidatorFactoryBean obterValidacao() {
 		LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
 		localValidatorFactoryBean.setValidationMessageSource(fonteDeMensagens());
-		return LocalValidatorFactoryBean;
+		return localValidatorFactoryBean;
 	}
 }
